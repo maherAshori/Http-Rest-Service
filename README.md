@@ -4,26 +4,6 @@ angular &amp; API Rest
 <h5>more about restApi</h5>
 <p><a href="https://en.wikipedia.org/wiki/Representational_state_transfer">Representational state transfer</a></p>
 
-<h5>why we use [] in the get</h5>
-```javascript
-  var id = "00000000-0000-0000-0000-000000000000";
-  service.getTeacher([id],function(data){
-    console.log(data);
-  });
-```
-
-in the rest api as default we have "api/{controller}/{id}", but what if we want have more params as optional like "api/{controller}/{id}/{type}/{grade}", in the RestService we use [] as optional params, for example:
-
-```javascript
-  var id = "00000000-0000-0000-0000-000000000000";
-  var type = true;
-  var grade = 5;
-  service.getTeacher([id, type, grade],function(data){
-    console.log(data);
-  });
-```
-this service will send api like this: "http://192.168.3.204:9005/api/Teacher/00000000-0000-0000-0000-000000000000/true/grade"
-
 <h5>Angular App</h5>
 ```javascript
 var app = angular.module("YourApplication", ["HttpRestApp"]);
@@ -278,5 +258,25 @@ var service = function (restService) {
 service.$inject = ["RestService"];
 app.service("Service", service);
 ```
+
+<h5>why we use [] in the get</h5>
+```javascript
+  var id = "00000000-0000-0000-0000-000000000000";
+  service.getTeacher([id],function(data){
+    console.log(data);
+  });
+```
+
+in the rest api as default we have "api/{controller}/{id}", but what if we want have more params as optional like "api/{controller}/{id}/{type}/{grade}", in the RestService we use [] as optional params, for example:
+
+```javascript
+  var id = "00000000-0000-0000-0000-000000000000";
+  var type = true;
+  var grade = 5;
+  service.getTeacher([id, type, grade],function(data){
+    console.log(data);
+  });
+```
+this service will send api like this: "http://192.168.3.204:9005/api/Teacher/00000000-0000-0000-0000-000000000000/true/grade"
 
 
