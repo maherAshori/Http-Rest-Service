@@ -21,20 +21,23 @@
 
         var routeParameters = "";
         var httpConfigUrl;
+        var httpUrl;
+
+        url ? httpUrl = url : httpUrl = baseUrl;
 
         if (isQueryString) {
-            httpConfigUrl = baseUrl + api;
+            httpConfigUrl = httpUrl + api;
         } else {
             if (params === null) {
-                httpConfigUrl = baseUrl + api;
+                httpConfigUrl = httpUrl + api;
             } else {
                 if (params.length === 1) {
-                    httpConfigUrl = baseUrl + api + "/" + params[0];
+                    httpConfigUrl = httpUrl + api + "/" + params[0];
                 } else {
                     angular.forEach(params, function (parameter) {
                         routeParameters += parameter + "/";
                     });
-                    httpConfigUrl = baseUrl + api + "/" + routeParameters;
+                    httpConfigUrl = httpUrl + api + "/" + routeParameters;
                 }
             }
         }
@@ -46,7 +49,7 @@
             headers: headers,
             data: data,
             params: params,
-            url: url ? url + api : httpConfigUrl
+            url: httpConfigUrl
         }).success(function (response) {
             deferred.resolve(response);
             cfpLoadingBar.complete();
