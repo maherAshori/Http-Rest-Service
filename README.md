@@ -27,7 +27,10 @@ app.run(run);
 <h1>How to use RestService in angular.controller</h1>
 
 ```javascript
-var controller = function (scope, service) {
+var controller = function (scope, service, restService) {
+  
+  ///get your http header
+  restService.testCurrentHeader();
   
   ///call getStudents from service
   ///url will send like this: "http://192.168.3.204:9005/api/Student"
@@ -94,7 +97,7 @@ var controller = function (scope, service) {
   }
 });
 
-controller.$inject = ["$scope", "Service"];
+controller.$inject = ["$scope", "Service", "RestService"];
 app.controller("Controller", controller);
 ```
 
