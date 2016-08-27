@@ -259,7 +259,7 @@ service.$inject = ["RestService"];
 app.service("Service", service);
 ```
 
-<h5>why we use [] in the get</h5>
+<h5>why restService used [], in the get</h5>
 ```javascript
   var id = "00000000-0000-0000-0000-000000000000";
   service.getTeacher([id],function(data){
