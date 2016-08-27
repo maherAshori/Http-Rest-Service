@@ -62,7 +62,10 @@
 <h1>
 <a id="how-to-use-restservice-in-angularcontroller" class="anchor" href="#how-to-use-restservice-in-angularcontroller" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>How to use RestService in angular.controller</h1>
 
-<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> <span class="pl-en">controller</span> <span class="pl-k">=</span> <span class="pl-k">function</span> (<span class="pl-smi">scope</span>, <span class="pl-smi">service</span>) {
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> <span class="pl-en">controller</span> <span class="pl-k">=</span> <span class="pl-k">function</span> (<span class="pl-smi">scope</span>, <span class="pl-smi">service</span>, <span class="pl-smi">restService</span>) {
+
+  <span class="pl-c">///get your http header</span>
+  <span class="pl-smi">restService</span>.<span class="pl-en">testCurrentHeader</span>();
 
   <span class="pl-c">///call getStudents from service</span>
   <span class="pl-c">///url will send like this: "http://192.168.3.204:9005/api/Student"</span>
@@ -129,7 +132,7 @@
   }
 });
 
-<span class="pl-smi">controller</span>.<span class="pl-smi">$inject</span> <span class="pl-k">=</span> [<span class="pl-s"><span class="pl-pds">"</span>$scope<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>Service<span class="pl-pds">"</span></span>];
+<span class="pl-smi">controller</span>.<span class="pl-smi">$inject</span> <span class="pl-k">=</span> [<span class="pl-s"><span class="pl-pds">"</span>$scope<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>Service<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>RestService<span class="pl-pds">"</span></span>];
 <span class="pl-smi">app</span>.<span class="pl-en">controller</span>(<span class="pl-s"><span class="pl-pds">"</span>Controller<span class="pl-pds">"</span></span>, controller);</pre></div>
 
 <h1>
