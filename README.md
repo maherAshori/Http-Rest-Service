@@ -3,6 +3,7 @@ angular &amp; API Rest
 
 <h5>more about restApi</h5>
 <p><a href="https://en.wikipedia.org/wiki/Representational_state_transfer">Representational state transfer</a></p>
+<p><a href="https://www.nuget.org/packages/AngularHttpRest/">nuget package link</a></p>
 
 <h5>Angular App</h5>
 ```javascript
