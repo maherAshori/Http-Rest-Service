@@ -279,4 +279,6 @@ in the rest api as default we have "api/{controller}/{id}", but what if we want 
 ```
 this service will send api like this: "http://192.168.3.204:9005/api/Teacher/00000000-0000-0000-0000-000000000000/true/grade"
 
+<hr>
 
+<a href="https://www.nuget.org/packages/AngularHttpRest/">nuget package link</a>
