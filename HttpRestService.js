@@ -1,4 +1,4 @@
-﻿angular.module("HttpRestApp", []).service("RestService", function ($rootScope, $http, $q, cfpLoadingBar, $interval, $filter) {
+﻿angular.module("HttpRestApp", []).service("RestService", function ($http, $q) {
     var baseUrl, headers;
 
     this.testCurrentHeader = function () {
@@ -14,11 +14,7 @@
         headers[key] = value;
     }
 
-    var httpConfig = function (method, api, params, data, isQueryString, url) {
-        $rootScope.errors = [];
-
-        cfpLoadingBar.start();
-
+    var httpConfig = function (method, api, params, data, isQueryString, url) {		
         var routeParameters = "";
         var httpConfigUrl;
         var httpUrl;
@@ -52,7 +48,6 @@
             url: httpConfigUrl
         }).success(function (response) {
             deferred.resolve(response);
-            cfpLoadingBar.complete();
         }).error(function (error) {
             console.error("HttpRestApp error:", error);
             deferred.reject(error);
