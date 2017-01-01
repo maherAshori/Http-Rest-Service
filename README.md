@@ -10,6 +10,31 @@ angular &amp; API Rest
 var app = angular.module("YourApplication", ["HttpRestApp"]);
 ```
 
+<h1>Http-Rest-Service: version 0.2 features</h1>
+
+Active Array Buffer : Sending and Receiving Binary Data
+
+```javascript
+//user activeArrayBuffer();
+restService.activeArrayBuffer();
+
+///active responseType to export files in your service 
+var service = function (restService) {
+    var api = {
+        exportExcelApi: "ExportExcel",
+    };
+    
+    this.downloadExcel = function (command, then) {
+        restService.activeArrayBuffer();
+        restService.addHeader("Accept", "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet");
+        restService.post(command, api.exportExcelApi).then(then);
+    };
+
+service.$inject = ["RestService"];
+studentApp.service("YourServiceName", service);
+```
+
+
 <h5>Angular App Run</h5>
 ```javascript
 var run = function (restService) {
