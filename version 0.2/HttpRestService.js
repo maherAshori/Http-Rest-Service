@@ -1,4 +1,9 @@
-﻿angular.module("HttpRestApp", []).service("RestService", function ($http, $q) {
+/*
+    Maher Ashori    
+    maher.ashori@gmail.com
+    1/9/2016
+*/
+angular.module("HttpRestApp", []).service("RestService", function ($http, $q) {
     var baseUrl, headers;
 
     this.testCurrentHeader = function () {
