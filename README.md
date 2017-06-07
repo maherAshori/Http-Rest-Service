@@ -1,4 +1,4 @@
-# Http-Rest-Service v 1.0.0 (RESTful API)
+# Http-Rest-Service v 2.0.0 (RESTful API)
 
 <small>A RESTful API is an application program interface (API) that uses HTTP requests to GET, PUT, POST and DELETE data.</small>
 
