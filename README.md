@@ -22,6 +22,7 @@ var app = angular.module("YourApplication", ["HttpRestApp"]);
 <h5>Get Errors in the controller</h5>
 
 <h6>service</h6>
+
 ```javascript
 this.get = function (then, error) {
     restService.get(null, api.postApi).then(then, error);
@@ -29,6 +30,7 @@ this.get = function (then, error) {
 ```
 
 <h6>controller</h6>
+
 ```javascript
 service.get(function (data) {
     //on success
