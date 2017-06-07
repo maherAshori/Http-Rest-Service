@@ -15,6 +15,7 @@ angular &amp; API Rest
 <p><a href="https://www.nuget.org/packages/AngularHttpRest/">nuget package link</a></p>
 
 <h5>Angular App</h5>
+
 ```javascript
 var app = angular.module("YourApplication", ["HttpRestApp"]);
 ```
