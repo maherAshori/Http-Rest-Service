@@ -66,6 +66,7 @@ studentApp.service("YourServiceName", service);
 
 
 <h5>Angular App Run</h5>
+
 ```javascript
 var run = function (restService) {
     var httpHeaders = {
@@ -159,6 +160,7 @@ app.controller("Controller", controller);
 <h1>How to use RestService in angular.service</h1>
 
 <h5>Angular Service: All types of get</h5>
+
 ```javascript
 var service = function (restService) {
     ///StudentController & TeacherController
@@ -219,6 +221,7 @@ app.service("Service", service);
 ```
 
 <h5>Angular Service: post / put</h5>
+
 ```javascript
 var service = function (restService) {
     ///StudentController & TeacherController
@@ -265,6 +268,7 @@ app.service("Service", service);
 ```
 
 <h5>Angular Service: all types of delete</h5>
+
 ```javascript
 var service = function (restService) {
     ///StudentController & TeacherController
@@ -319,6 +323,7 @@ app.service("Service", service);
 ```
 
 <h5>why restService used [], in the get</h5>
+
 ```javascript
   var id = "00000000-0000-0000-0000-000000000000";
   service.getTeacher([id],function(data){
