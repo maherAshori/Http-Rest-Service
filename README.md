@@ -1,5 +1,14 @@
-# Http-Rest-Service
+# Http-Rest-Service v 1.0.0
 angular &amp; API Rest
+
+<h5>Updates</h5>
+
+<ul>
+<li>Coordinated by Angular version > 1.5.9</li>
+<li>Fix bugs on promise output</li>
+<li>now you can get error from controller</li>
+<li>Active Array Buffer</li>
+</ul>
 
 <h5>more about restApi</h5>
 <p><a href="https://en.wikipedia.org/wiki/Representational_state_transfer">Representational state transfer</a></p>
@@ -10,9 +19,27 @@ angular &amp; API Rest
 var app = angular.module("YourApplication", ["HttpRestApp"]);
 ```
 
-<h1>Http-Rest-Service: version 0.2 features</h1>
+<h5>Get Errors in the controller</h5>
 
-Active Array Buffer : Sending and Receiving Binary Data
+<h6>service</h6>
+```javascript
+this.get = function (then, error) {
+    restService.get(null, api.postApi).then(then, error);
+}
+```
+
+<h6>controller</h6>
+```javascript
+service.get(function (data) {
+    //on success
+    console.log(data);
+}, function (error) {
+    //on error
+    console.log(error);
+});
+```
+
+<h5>Active Array Buffer : Sending and Receiving Binary Data</h5>
 
 ```javascript
 //user activeArrayBuffer();
