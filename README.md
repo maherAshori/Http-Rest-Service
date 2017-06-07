@@ -1,5 +1,10 @@
-# Http-Rest-Service v 1.0.0
-angular &amp; API Rest
+# Http-Rest-Service v 1.0.0 (RESTful API)
+
+<small>A RESTful API is an application program interface (API) that uses HTTP requests to GET, PUT, POST and DELETE data.</small>
+
+<h5>links</h5>
+<p><a href="https://en.wikipedia.org/wiki/Representational_state_transfer">Representational state transfer</a></p>
+<p><a href="https://www.nuget.org/packages/AngularHttpRest/">nuget package link</a></p>
 
 <h5>Updates</h5>
 
@@ -9,10 +14,6 @@ angular &amp; API Rest
 <li>now you can get error from controller</li>
 <li>Active Array Buffer</li>
 </ul>
-
-<h5>more about restApi</h5>
-<p><a href="https://en.wikipedia.org/wiki/Representational_state_transfer">Representational state transfer</a></p>
-<p><a href="https://www.nuget.org/packages/AngularHttpRest/">nuget package link</a></p>
 
 <h5>Angular App</h5>
 
@@ -345,4 +346,7 @@ this service will send api like this: "http://192.168.3.204:9005/api/Teacher/000
 
 <hr>
 
-<a href="https://www.nuget.org/packages/AngularHttpRest/">nuget package link</a>
+<h5>links</h5>
+<p><a href="https://en.wikipedia.org/wiki/Representational_state_transfer">Representational state transfer</a></p>
+<p><a href="https://www.nuget.org/packages/AngularHttpRest/">nuget package link</a></p>
+
