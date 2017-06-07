@@ -1,9 +1,9 @@
 /*
-    @license Angular-HttpRestApp v1.0.0
+    @license Angular-HttpRestApp v2.0.0
     author: Maher Ashori    
     email: maher.ashori@gmail.com
     last modify: 2017-06-07
-    AngularJS > v1.6.0   
+    AngularJS > v1.5.9   
 */
 angular.module("HttpRestApp", []).service("RestService", function ($http, $q) {
     var baseUrl, headers, arraybuffer;
